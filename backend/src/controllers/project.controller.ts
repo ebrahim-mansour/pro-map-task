@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { NotFoundError } from "../errors/not-found-error";
+import { NotFoundError } from "../common/errors/not-found-error";
 import { Project } from "../models/project.model";
 
 export const createProjectController = async (req: Request, res: Response) => {

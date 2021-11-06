@@ -4,7 +4,7 @@ import { json } from "body-parser";
 import { projectRouter } from "./routes/project.routes";
 import cors from "cors";
 import { errorHandler } from "./middlewares/error-handler";
-import { NotFoundError } from "./errors/not-found-error";
+import { NotFoundError } from "./common/errors/not-found-error";
 
 const app = express();
 app.use(cors());
