@@ -3,12 +3,14 @@ import { Observable } from "rxjs";
 import { Injectable } from "@angular/core";
 
 import { Project } from "./project.model";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
   providedIn: "root",
 })
 export class ProjectService {
-  url = "http://localhost:3000/api/projects";
+  url = environment.backend_url + "/projects";
+
   constructor(public http: HttpClient) {}
 
   getProjects(): Observable<Project[]> {
