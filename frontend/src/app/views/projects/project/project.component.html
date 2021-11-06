@@ -1,0 +1,44 @@
+<div class="col-12 mt-4">
+  <div class="card">
+    <div class="card-header"><strong>Add new project</strong></div>
+    <div class="card-body">
+      <form class="form-horizontal">
+        <div class="form-group row">
+          <label for="text-input" class="col-md-3 col-form-label">Title</label>
+          <div class="col-md-9">
+            <input
+              type="text"
+              id="text-input"
+              name="text-input"
+              [(ngModel)]="title"
+              placeholder="Enter title please.."
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="textarea-input" class="col-md-3 col-form-label"
+            >Description</label
+          >
+          <div class="col-md-9">
+            <textarea
+              id="textarea-input"
+              [(ngModel)]="description"
+              name="textarea-input"
+              rows="9"
+              placeholder="Enter description please.."
+              class="form-control"
+            ></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      <button type="submit" class="btn btn-sm btn-primary" (click)="onSubmit()">
+        <i class="fa fa-dot-circle-o"></i> Submit</button
+      ><button type="reset" class="btn btn-sm btn-danger" routerLink="/">
+        <i class="fa fa-ban"></i> Cancel
+      </button>
+    </div>
+  </div>
+</div>
